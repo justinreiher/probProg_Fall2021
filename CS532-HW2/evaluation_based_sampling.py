@@ -199,7 +199,7 @@ def get_stream(ast):
 
 def run_deterministic_tests():
     
-    for i in range(14,14):
+    for i in range(1,14):
          #note: this path should be with respect to the daphne path!
         ast = daphne(['desugar', '-i', '../CS532-HW2/programs/tests/deterministic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/deterministic/test_{}.truth'.format(i))
@@ -221,7 +221,7 @@ def run_probabilistic_tests():
     num_samples=1e4
     max_p_value = 1e-4
     
-    for i in range(7,7):
+    for i in range(1,7):
         #note: this path should be with respect to the daphne path!        
         ast = daphne(['desugar', '-i', '../CS532-HW2/programs/tests/probabilistic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/probabilistic/test_{}.truth'.format(i))
@@ -256,19 +256,43 @@ def plotResults(data):
             tensorSize = tensorData.size()
             numRows = tensorSize[1]
             numCols = tensorSize[2]
+            means = []
+            stds  = []
             #create subplots of size of data
             fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
             for r in range(numRows):
                 for c in range(numCols):
                     if numRows == 1:
+                        m = float(tensorData[:,r,c].mean())
+                        s = float(tensorData[:,r,c].std())
+                        means.append(float(tensorData[:,r,c].mean()))
+                        stds.append(float(tensorData[:,r,c].std()))
                         ax = axes[c]
                         ax.hist(tensorData[:,r,c].numpy())
+                        ax.set_xlabel('Samples')
+                        ax.set_ylabel('PDF')
+                        ax.set_title('mean = '+ "{:.4f}".format(m) + ' std = ' + "{:.4f}".format(s))
                     elif numCols == 1:
+                        m = float(tensorData[:,r,c].mean())
+                        s = float(tensorData[:,r,c].std())
+                        means.append(float(tensorData[:,r,c].mean()))
+                        stds.append(float(tensorData[:,r,c].std()))
                         ax = axes[r]
                         ax.hist(tensorData[:,r,c].numpy())
+                        ax.set_xlabel('Samples')
+                        ax.set_ylabel('PDF')
+                        ax.set_title('mean = '+ "{:.4f}".format(m) + ' std = ' + "{:.4f}".format(s))
                     else:
+                        m = float(tensorData[:,r,c].mean())
+                        s = float(tensorData[:,r,c].std())
+                        means.append(float(tensorData[:,r,c].mean()))
+                        stds.append(float(tensorData[:,r,c].std()))
                         ax = axes[r,c]
                         ax.hist(tensorData[:,r,c].numpy())
+                        ax.set_xlabel('Samples')
+                        ax.set_ylabel('PDF')
+                        ax.set_title('mean ='+ "{:.4f}".format(m) + ' std = ' + "{:.4f}".format(s))
+            print('mean = ', means, 'std = ', stds)
             plt.show()
 
     else:
@@ -276,16 +300,33 @@ def plotResults(data):
         tensorSize = tensorData.size()
         #one dimensional dataset
         if(len(tensorSize) == 1):
+            print('mean = ',float(tensorData.mean()),' std = ', float(tensorData.std()))
+            m = float(tensorData.mean())
+            s = float(tensorData.std())
             fig = plt.hist(tensorData.numpy(),bins=10)
+            plt.xlabel('Samples')
+            plt.ylabel('PDF')
+            plt.title('mean ='+ "{:.4f}".format(m) + ' std = ' + "{:.4f}".format(s))
             plt.show()
         elif(len(tensorSize) == 2):
             numRows = 1
             numCols = tensorSize[1]
+            means = []
+            stds  = []
             fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
             for r in range(numRows):
                 for c in range(numCols):
+                    m = float(tensorData[:,c].mean())
+                    s = float(tensorData[:,c].std())
+                    means.append(float(tensorData[:,c].mean()))
+                    stds.append(float(tensorData[:,c].std()))
                     ax = axes[c]
                     ax.hist(tensorData[:,c].numpy())
+                    ax.set_xlabel('Samples')
+                    ax.set_ylabel('PDF')
+                    #ax.set_title('Step = '+ str(c))
+                    ax.set_title('mean ='+ "{:.4f}".format(m) + ' std = ' + "{:.4f}".format(s))
+            print('mean = ', means, ' std = ', stds)
             plt.show()
 
         

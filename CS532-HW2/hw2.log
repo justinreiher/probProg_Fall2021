@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.1)  20 OCT 2021 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.1)  20 OCT 2021 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -296,23 +296,25 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip49
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 ) (./hw2.aux)
 \openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 \c@lstlisting=\count124
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -346,7 +348,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -356,51 +358,181 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
 
 (./hw2.out) (./hw2.out)
 \@outlinefile=\write3
 \openout3 = `hw2.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rho' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(./evaluation_based_sampling.py) (./evaluation_based_sampling.py) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./evaluation_based_sampli
+ng.py)
+(./evaluation_based_sampling.py) (./evaluation_based_sampling.py)
+(./evaluation_based_sampling.py [2]) (./evaluation_based_sampling.py)
+(./evaluation_based_sampling.py) [3] (./evaluation_based_sampling.py [4])
+(./evaluation_based_sampling.py) [5] (./evaluation_based_sampling.py) [6]
+<Eval/GaussianUnitTest.png, id=242, 1071.7641pt x 786.2976pt>
+File: Eval/GaussianUnitTest.png Graphic file (type png)
+<use Eval/GaussianUnitTest.png>
+Package pdftex.def Info: Eval/GaussianUnitTest.png  used on input line 143.
+(pdftex.def)             Requested size: 345.0pt x 253.10812pt.
+<Eval/BayesianLinearReg.png, id=244, 1463.4675pt x 902.6523pt>
+File: Eval/BayesianLinearReg.png Graphic file (type png)
+<use Eval/BayesianLinearReg.png>
+Package pdftex.def Info: Eval/BayesianLinearReg.png  used on input line 148.
+(pdftex.def)             Requested size: 345.0pt x 212.78444pt.
+
+[7 <./Eval/GaussianUnitTest.png>]
+<Eval/HMM.png, id=253, 2543.904pt x 854.9541pt>
+File: Eval/HMM.png Graphic file (type png)
+<use Eval/HMM.png>
+Package pdftex.def Info: Eval/HMM.png  used on input line 155.
+(pdftex.def)             Requested size: 345.0pt x 115.93564pt.
+ [8 <./Eval/BayesianLinearReg.png> <./Eval/HMM.png>]
+<Eval/W0_nn.png, id=262, 755.2215pt x 1308.087pt>
+File: Eval/W0_nn.png Graphic file (type png)
+<use Eval/W0_nn.png>
+Package pdftex.def Info: Eval/W0_nn.png  used on input line 164.
+(pdftex.def)             Requested size: 254.02925pt x 440.00168pt.
+<Eval/b0_nn.png, id=263, 825.3234pt x 1232.2035pt>
+File: Eval/b0_nn.png Graphic file (type png)
+<use Eval/b0_nn.png>
+Package pdftex.def Info: Eval/b0_nn.png  used on input line 170.
+(pdftex.def)             Requested size: 331.54655pt x 494.99664pt.
+ [9 <./Eval/W0_nn.png>]
+<Eval/W1_nn.png, id=270, 2660.9814pt x 1409.265pt>
+File: Eval/W1_nn.png Graphic file (type png)
+<use Eval/W1_nn.png>
+Package pdftex.def Info: Eval/W1_nn.png  used on input line 176.
+(pdftex.def)             Requested size: 345.0pt x 182.6948pt.
+ [10 <./Eval/b0_nn.png>]
+<Eval/b1_nn.png, id=277, 760.2804pt x 1142.5887pt>
+File: Eval/b1_nn.png Graphic file (type png)
+<use Eval/b1_nn.png>
+Package pdftex.def Info: Eval/b1_nn.png  used on input line 182.
+(pdftex.def)             Requested size: 292.77266pt x 440.00168pt.
+ [11 <./Eval/W1_nn.png>]
+[12 <./Eval/b1_nn.png>] (./graph_based_sampling.py) (./graph_based_sampling.py)
+(./graph_based_sampling.py) (./primitives.py [13]) (./primitives.py [14])
+(./primitives.py [15]) (./primitives.py) [16] [17]
+<Graph/GaussianUnitTest.png, id=476, 1015.3935pt x 870.8535pt>
+File: Graph/GaussianUnitTest.png Graphic file (type png)
+<use Graph/GaussianUnitTest.png>
+Package pdftex.def Info: Graph/GaussianUnitTest.png  used on input line 249.
+(pdftex.def)             Requested size: 345.0pt x 295.88695pt.
+<Graph/BayesianLinearReg.png, id=477, 1485.1485pt x 870.1308pt>
+File: Graph/BayesianLinearReg.png Graphic file (type png)
+<use Graph/BayesianLinearReg.png>
+Package pdftex.def Info: Graph/BayesianLinearReg.png  used on input line 255.
+(pdftex.def)             Requested size: 345.0pt x 202.1307pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Graph/HMM.png, id=478, 2434.0536pt x 964.0818pt>
+File: Graph/HMM.png Graphic file (type png)
+<use Graph/HMM.png>
+Package pdftex.def Info: Graph/HMM.png  used on input line 261.
+(pdftex.def)             Requested size: 345.0pt x 136.64754pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Graph/W0_nn.png, id=479, 889.6437pt x 1163.547pt>
+File: Graph/W0_nn.png Graphic file (type png)
+<use Graph/W0_nn.png>
+Package pdftex.def Info: Graph/W0_nn.png  used on input line 270.
+(pdftex.def)             Requested size: 345.0pt x 451.22488pt.
+<Graph/b0_nn.png, id=480, 1193.1777pt x 1220.6403pt>
+File: Graph/b0_nn.png Graphic file (type png)
+<use Graph/b0_nn.png>
+Package pdftex.def Info: Graph/b0_nn.png  used on input line 276.
+(pdftex.def)             Requested size: 345.0pt x 352.93361pt.
+<Graph/W1_nn.png, id=481, 2660.9814pt x 1409.265pt>
+File: Graph/W1_nn.png Graphic file (type png)
+<use Graph/W1_nn.png>
+Package pdftex.def Info: Graph/W1_nn.png  used on input line 282.
+(pdftex.def)             Requested size: 345.0pt x 182.6948pt.
+<Graph/b1_nn.png, id=482, 959.0229pt x 1262.5569pt>
+File: Graph/b1_nn.png Graphic file (type png)
+<use Graph/b1_nn.png>
+Package pdftex.def Info: Graph/b1_nn.png  used on input line 288.
+(pdftex.def)             Requested size: 345.0pt x 454.19264pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./Graph/GaussianUnitTest.png>] [19 <./Graph/BayesianLinearReg.png> <./Grap
+h/HMM.png>] [20 <./Graph/W0_nn.png>] [21 <./Graph/b0_nn.png>] [22 <./Graph/W1_n
+n.png>] [23 <./Graph/b1_nn.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
  (./hw2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
 Package rerunfilecheck Info: File `hw2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+(rerunfilecheck)             Checksum: 629FF1BA5DB3E20395CCC3B219531DC1;384.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
  ) 
 Here is how much of TeX's memory you used:
- 8024 strings out of 494847
- 114253 string characters out of 6179081
- 201167 words of memory out of 5000000
- 11274 multiletter control sequences out of 15000+600000
- 8584 words of font info for 33 fonts, out of 8000000 for 9000
+ 8803 strings out of 494847
+ 125428 string characters out of 6179081
+ 564648 words of memory out of 5000000
+ 11613 multiletter control sequences out of 15000+600000
+ 11877 words of font info for 47 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 28i,6n,35p,249b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on hw2.pdf (1 page, 37343 bytes).
+ 28i,7n,43p,492b,1752s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on hw2.pdf (23 pages, 1408130 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 572 compressed objects within 6 object streams
+ 378 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
