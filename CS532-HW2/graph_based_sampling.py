@@ -6,6 +6,8 @@ from daphne import daphne
 from primitives import funcprimitives,bindingVars,topologicalSort
 from tests import is_tol, run_prob_test,load_truth
 
+import matplotlib.pyplot as plt
+
 # Put all function mappings from the deterministic language environment to your
 # Python evaluation context here:
 env = { 'sqrt': torch.sqrt,
@@ -100,7 +102,7 @@ def get_stream(graph):
 
 def run_deterministic_tests():
     
-    for i in range(1,13):
+    for i in range(13,13):
         #note: this path should be with respect to the daphne path!
         graph = daphne(['graph','-i','../CS532-HW2/programs/tests/deterministic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/deterministic/test_{}.truth'.format(i))
@@ -122,7 +124,7 @@ def run_probabilistic_tests():
     num_samples=1e4
     max_p_value = 1e-4
     
-    for i in range(1,7):
+    for i in range(7,7):
         #note: this path should be with respect to the daphne path!        
         graph = daphne(['graph', '-i', '../CS532-HW2/programs/tests/probabilistic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/probabilistic/test_{}.truth'.format(i))
@@ -136,7 +138,59 @@ def run_probabilistic_tests():
     
     print('All probabilistic tests passed')    
 
+def plotResults(data):
 
+    #want to turn data into a tensor object to easily extract peices
+    #determine how many elements are in each entry
+    e = data[0]
+    
+    #if each element in data is a list, i.e. a compounding list of objects
+    if type(e) == list:
+        #get the number of elements per entry
+        numObjPerEntry = len(e)
+        #create one object for each entry that contains all the samples
+        for j in range(numObjPerEntry):
+            tensorData = []
+            for d in data:
+                tensorData.append(d[j])
+
+            #once all the samples are collected create a tensor object of them for easy access
+            tensorData = torch.stack(tensorData)
+            #determine the size of this object (should be vectors or matrices)
+            tensorSize = tensorData.size()
+            numRows = tensorSize[1]
+            numCols = tensorSize[2]
+            #create subplots of size of data
+            fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
+            for r in range(numRows):
+                for c in range(numCols):
+                    if numRows == 1:
+                        ax = axes[c]
+                        ax.hist(tensorData[:,r,c].numpy())
+                    elif numCols == 1:
+                        ax = axes[r]
+                        ax.hist(tensorData[:,r,c].numpy())
+                    else:
+                        ax = axes[r,c]
+                        ax.hist(tensorData[:,r,c].numpy())
+            plt.show()
+
+    else:
+        tensorData = torch.stack(data)
+        tensorSize = tensorData.size()
+        #one dimensional dataset
+        if(len(tensorSize) == 1):
+            fig = plt.hist(tensorData.numpy(),bins=10)
+            plt.show()
+        elif(len(tensorSize) == 2):
+            numRows = 1
+            numCols = tensorSize[1]
+            fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
+            for r in range(numRows):
+                for c in range(numCols):
+                    ax = axes[c]
+                    ax.hist(tensorData[:,c].numpy())
+            plt.show()
         
         
 if __name__ == '__main__':
@@ -145,12 +199,15 @@ if __name__ == '__main__':
     run_deterministic_tests()
     run_probabilistic_tests()
 
-
-
+    num_samples = 1000
+    samplesCollected = [[],[],[],[],[]]
 
     for i in range(1,5):
         graph = daphne(['graph','-i','../CS532-HW2/programs/{}.daphne'.format(i)])
         print('\n\n\nSample of prior of program {}:'.format(i))
-        print(sample_from_joint(graph))    
+        for j in range(num_samples):
+            samplesCollected[i-1].append(sample_from_joint(graph))
+        plotResults(samplesCollected[i-1])
+        print(samplesCollected[i-1][0])    
 
     

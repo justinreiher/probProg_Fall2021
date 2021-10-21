@@ -3,9 +3,8 @@ from tests import is_tol, run_prob_test,load_truth
 
 import torch
 import torch.distributions as dist
-from scipy.io import savemat
+import matplotlib.pyplot as plt
 
-torchBuiltIn = type(torch.add)
 #global state
 sig = []
 var = {}
@@ -155,6 +154,8 @@ def evaluate_program(ast):
                     ret = e[1].repeat(e[2],e[3])
                 elif e[0] == 'mat-transpose':
                     ret = op(e[1])
+                    print(ret)
+                    input('make sure I get here')
                 else:
                     ret = op(*args)
 
@@ -198,7 +199,7 @@ def get_stream(ast):
 
 def run_deterministic_tests():
     
-    for i in range(1,14):
+    for i in range(14,14):
          #note: this path should be with respect to the daphne path!
         ast = daphne(['desugar', '-i', '../CS532-HW2/programs/tests/deterministic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/deterministic/test_{}.truth'.format(i))
@@ -220,7 +221,7 @@ def run_probabilistic_tests():
     num_samples=1e4
     max_p_value = 1e-4
     
-    for i in range(1,7):
+    for i in range(7,7):
         #note: this path should be with respect to the daphne path!        
         ast = daphne(['desugar', '-i', '../CS532-HW2/programs/tests/probabilistic/test_{}.daphne'.format(i)])
         truth = load_truth('programs/tests/probabilistic/test_{}.truth'.format(i))
@@ -231,7 +232,61 @@ def run_probabilistic_tests():
         print('p value', p_val)
         assert(p_val > max_p_value)
     
-    print('All probabilistic tests passed')    
+    print('All probabilistic tests passed')
+
+def plotResults(data):
+
+    #want to turn data into a tensor object to easily extract peices
+    #determine how many elements are in each entry
+    e = data[0]
+    
+    #if each element in data is a list, i.e. a compounding list of objects
+    if type(e) == list:
+        #get the number of elements per entry
+        numObjPerEntry = len(e)
+        #create one object for each entry that contains all the samples
+        for j in range(numObjPerEntry):
+            tensorData = []
+            for d in data:
+                tensorData.append(d[j])
+
+            #once all the samples are collected create a tensor object of them for easy access
+            tensorData = torch.stack(tensorData)
+            #determine the size of this object (should be vectors or matrices)
+            tensorSize = tensorData.size()
+            numRows = tensorSize[1]
+            numCols = tensorSize[2]
+            #create subplots of size of data
+            fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
+            for r in range(numRows):
+                for c in range(numCols):
+                    if numRows == 1:
+                        ax = axes[c]
+                        ax.hist(tensorData[:,r,c].numpy())
+                    elif numCols == 1:
+                        ax = axes[r]
+                        ax.hist(tensorData[:,r,c].numpy())
+                    else:
+                        ax = axes[r,c]
+                        ax.hist(tensorData[:,r,c].numpy())
+            plt.show()
+
+    else:
+        tensorData = torch.stack(data)
+        tensorSize = tensorData.size()
+        #one dimensional dataset
+        if(len(tensorSize) == 1):
+            fig = plt.hist(tensorData.numpy(),bins=10)
+            plt.show()
+        elif(len(tensorSize) == 2):
+            numRows = 1
+            numCols = tensorSize[1]
+            fig, axes = plt.subplots(nrows=numRows, ncols=numCols, figsize=(10, 10))
+            for r in range(numRows):
+                for c in range(numCols):
+                    ax = axes[c]
+                    ax.hist(tensorData[:,c].numpy())
+            plt.show()
 
         
 if __name__ == '__main__':
@@ -248,7 +303,6 @@ if __name__ == '__main__':
         print('\n\n\nSample of prior of program {}:'.format(i))
         for j in range(0,num_samples):
             samplesCollected[i-1].append(evaluate_program(ast)[0])
+        plotResults(samplesCollected[i-1])
         print(samplesCollected[i-1][0])
-
-    savemat('samples.mat',{'data':samplesCollected})
 
