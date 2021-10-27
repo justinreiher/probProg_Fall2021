@@ -68,10 +68,10 @@ def funcprimitives(e,op,args):
 			ret = args
 	elif e == 'sample*':
 		Dobj = args[0]
-		ret = Dobj.sample().clone().detach().requires_grad_(True)
+		ret = Dobj.sample()
 	elif e == 'observe*':
 		Dobj = args[0]
-		ret = [Dobj.log_prob(args[1]),args[1]]
+		ret = Dobj.log_prob(args[1])
 	elif e == 'if':
 		if args[0]:
 			ret = args[1]
@@ -95,7 +95,7 @@ def funcprimitives(e,op,args):
 	elif e == '=':
 		ret = torch.tensor(float(op(*args)))
 	elif e == 'dirac':
-		sigma = 0.01
+		sigma = 0.1
 		ret = dist.Normal(args[0],sigma)
 	else:
 		ret = op(*args)

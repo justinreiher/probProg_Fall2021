@@ -22,6 +22,19 @@ def likelihoodWeighting(L,ast):
         ret.append(r)
         w.append(s)
     return ret,w
+
+def plotIS(r,w):
+    x = []
+    for i in range(len(r)):
+        x.append(w[i].exp()*r[i])
+    Wnorm = torch.stack(w).exp().cumsum(0)
+    x = torch.stack(x).cumsum(0)
+
+    X = []
+    for i in range(len(x)):
+        X.append(x[i]/Wnorm[i])
+    plt.plot(torch.stack(X).numpy())
+    plt.show()
         
 if __name__ == '__main__':
 
@@ -39,4 +52,6 @@ if __name__ == '__main__':
             x.append(w[i].exp()*r[i]/Wnorm)
        # plotResults(result)
         print(sum(x))
+        plotIS(r,w)
+
 

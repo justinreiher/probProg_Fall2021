@@ -170,7 +170,7 @@ def evaluate_program(ast):
                     vec = args[0]
                     ret = torch.cat((vec,torch.tensor([args[1]])),0)
                 elif e[0] == 'dirac':
-                    sigma = 0.01
+                    sigma = 0.1
                     ret = dist.Normal(args[0],sigma)
                 elif e[0] == 'hash-map':
                     myDict = {} #need to build the hash-map with non-tensor keys, want to make use of the arguments collected above

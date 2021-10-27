@@ -95,7 +95,7 @@ def funcprimitives(e,op,args):
 	elif e == '=':
 		ret = torch.tensor(float(op(*args)))
 	elif e == 'dirac':
-		sigma = 0.01
+		sigma = 0.1
 		ret = dist.Normal(args[0],sigma)
 	else:
 		ret = op(*args)

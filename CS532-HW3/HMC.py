@@ -13,22 +13,18 @@ Q = {}
 
 def grad(X):
 	gradU = {}
-	logprob = 0
-	for x in X:
+	u = 0
+	for x in vertices:
 		evalX = bindingVars(X,linkFuncs[x])
 		if(evalX[0] == 'sample*'):
 			evalX[0] = 'observe*'
-			evalX.append(X[x].clone().detach().requires_grad_(True))
-		#observe on each X
-		
-		u = deterministic_eval(evalX)
-		logprob -= u[0]
-		gradU[x] = u[1]
+			evalX.append(X[x].clone().detach())
 
-	logprob.backward()
-	for x in gradU:
-		gradU[x] = gradU[x].grad
+		u -= deterministic_eval(evalX)
 
+	u.backward()
+	for x in X:
+		gradU[x] = X[x].grad
 	return gradU
 
 def leapfrog(X,R,T,eps):
@@ -39,14 +35,16 @@ def leapfrog(X,R,T,eps):
 	Xt = X.copy()
 	for t in range(1,T-1):
 		for x in X:
-			Xt[x] = Xt[x] + eps*Rh[x]
+			Xt[x] = Xt[x].detach() + eps*Rh[x]
+			Xt[x].requires_grad_(True) #re-init gradient for next iteration
 		gradU = grad(Xt)
 		for x in X:
 			Rh[x] = Rh[x] - eps*gradU[x]
 	XT ={}
 	RT = {}
 	for x in X:
-		XT[x] = Xt[x] + eps*Rh[x]
+		XT[x] = Xt[x].detach() + eps*Rh[x]
+		XT[x].requires_grad_(True)
 	gradU = grad(XT)
 	for x in X:
 		RT[x] = Rh[x] - 0.5*eps*gradU[x]
@@ -83,11 +81,8 @@ def HMC(graph,num_samples,T,eps):
     #set X_0, by sampling every unobserved node
     for i in X:
         linkFuncsEval = bindingVars(X,linkFuncs[i])
-        X[i]  = deterministic_eval(linkFuncsEval)
+        X[i]  = deterministic_eval(linkFuncsEval).requires_grad_(True)
 
-    # add to X the observed Y's
-    for i in Y:
-    	X[i] = torch.tensor(float(Y[i]),requires_grad = True)
     M = 1
     R = {}
 
@@ -109,7 +104,7 @@ def HMC(graph,num_samples,T,eps):
     		# find and replace the variables with the results from evaluating the link functions
     		retExp = bindingVars(X,E)
 
-    	Xs.append(deterministic_eval(retExp))
+    	Xs.append(deterministic_eval(retExp).detach())
         	
         
     return Xs
@@ -117,12 +112,13 @@ def HMC(graph,num_samples,T,eps):
 def H(X,R,M):
 	U = 0
 	Rv = []
-	for x in X:
+	for x in vertices:
 		evalX = bindingVars(X,linkFuncs[x])
 		if(evalX[0] == 'sample*'):
 			evalX[0] = 'observe*'
-			evalX.append(X[x])
-		U-=deterministic_eval(evalX)[1]
+			evalX.append(X[x].detach())
+		U-=deterministic_eval(evalX)
+	for x in X:
 		Rv.append(R[x])
 	Rv = torch.stack(Rv)
 	M = torch.eye(len(Rv))*M

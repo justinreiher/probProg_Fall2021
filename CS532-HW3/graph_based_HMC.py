@@ -18,10 +18,11 @@ def get_stream(graph):
 if __name__ == '__main__':
     
 
-    num_samples = 2000
-    T = 15
+    num_samples = 5000
+    T = 20
     eps = 0.01
     samplesCollected = []
+    j = 0
 
     for i in [1,2,5]:
         graph = daphne(['graph','-i','../CS532-HW3/programs/{}.daphne'.format(i)])
@@ -30,9 +31,10 @@ if __name__ == '__main__':
         samplesCollected.append(HMC(graph,num_samples,T,eps))
   #      plotResults(samplesCollected[i-1])
   #      print(samplesCollected)
-        print(torch.stack(samplesCollected[i-1]).mean(0))
+        print(torch.stack(samplesCollected[j]).mean(0))
       #  print(samplesCollected[i-1][num_samples-1])
-        plt.plot(torch.stack(samplesCollected[i-1]).detach().numpy())
-        plt.show()   
+        plt.plot(torch.stack(samplesCollected[j]).detach().numpy())
+        plt.show()
+        j += 1   
 
     
