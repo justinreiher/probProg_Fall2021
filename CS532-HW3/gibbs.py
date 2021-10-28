@@ -67,6 +67,7 @@ def gibbsMH(graph,num_samples):
     E = graph[2] #get the expression we want to evaluate
     X = {}
     Xs =[] #set of samples
+    jll = [] #set of joint-log-lik for each sample
 
     #First we topologically sort the vertices
     vertices = topologicalSort(vertices,edges)
@@ -85,6 +86,7 @@ def gibbsMH(graph,num_samples):
         X[i]  = deterministic_eval(linkFuncsEval)
 
     for s in range(num_samples):
+        jll.append(0)
         Xret = gibbs_step(X)
 
         if type(E) == str:
@@ -98,7 +100,14 @@ def gibbsMH(graph,num_samples):
         Xs.append(deterministic_eval(retExp))
         X = Xret.copy()
 
-    return Xs
+        for x in vertices:
+            linkFuncsEval = bindingVars(X,linkFuncs[x])
+            if(linkFuncsEval[0] == 'sample*'):
+                linkFuncsEval[0] == 'observe*'
+                linkFuncsEval.append(X[x].clone().detach())
+            jll[s] = jll[s] + deterministic_eval(linkFuncsEval)
+
+    return Xs,jll
 
 def getMarkovBlanket(x):
 	nodes = [x]

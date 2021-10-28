@@ -69,7 +69,7 @@ def HMC(graph,num_samples,T,eps):
     E = graph[2] #get the expression we want to evaluate
     X = {}
     Xs =[] #set of samples
-
+    jll = [] #set of joint-log-lik for each sample
     #First we topologically sort the vertices
     vertices = topologicalSort(vertices,edges)
 
@@ -87,6 +87,7 @@ def HMC(graph,num_samples,T,eps):
     R = {}
 
     for s in range(num_samples):
+    	jll.append(0)
     	for x in X:
     		R[x] = dist.Normal(0,M).sample()
 
@@ -103,11 +104,18 @@ def HMC(graph,num_samples,T,eps):
     	else:
     		# find and replace the variables with the results from evaluating the link functions
     		retExp = bindingVars(X,E)
+    	Xjll = X.copy()
+    	for x in vertices:
+    		linkFuncsEval = bindingVars(Xjll,linkFuncs[x])
+    		if(linkFuncsEval[0] == 'sample*'):
+    			linkFuncsEval[0] == 'observe*'
+    			linkFuncsEval.append(Xjll[x].clone().detach())
+    		jll[s] = jll[s] + deterministic_eval(linkFuncsEval)
 
     	Xs.append(deterministic_eval(retExp).detach())
         	
         
-    return Xs
+    return Xs,jll
 
 def H(X,R,M):
 	U = 0
