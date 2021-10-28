@@ -67,7 +67,7 @@ if __name__ == '__main__':
     num_samples = 8000
     samplesCollected = []
 
-    for i in range(3,4):
+    for i in range(1,6):
         graph = daphne(['graph','-i','../CS532-HW3/programs/{}.daphne'.format(i)])
         print('\n\n\nCollect samples denoted by program {}:'.format(i))
         if i == 3:
