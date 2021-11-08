@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.1)  5 NOV 2021 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.7.1)  6 NOV 2021 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,177 +429,207 @@ File: Figures/distEst3.png Graphic file (type png)
 Package pdftex.def Info: Figures/distEst3.png  used on input line 121.
 (pdftex.def)             Requested size: 345.0pt x 181.5121pt.
  [8 <./Figures/elbo_3Adam3.png> <./Figures/distEst3.png>]
-Overfull \hbox (195.74529pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 Mean of samples  W1 :  tensor([[-0.3377,  0.1622,  0.2904,  
-0.3412, -0.0154, -0.2529,  0.1761,  0.6720,[] 
- []
-
-
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.6109, -0.0588,  0.1595, -0.2266, -0.2677, -0.1859,  0.23
-64,  0.0217,[] 
- []
-
-
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [-0.0839, -0.2009, -0.3588, -0.1991,  0.1542, -0.0972,  0.20
-10, -0.1792,[] 
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 Mean of samples  W1 :  tensor([[-0.2270,  0.0882, -0.0121,  
+0.1743,  0.1357, -0.0302,  0.1037,  0.0258,[] 
  []
 
 [9]
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.0038,  0.0847, -0.0733, -0.2610,  0.0972,  0.1078, -0.05
-53,  0.2599,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [ 0.0335,  0.1321, -0.2206,  0.0070,  0.3172, -0.0196, -0.11
+12,  0.3747,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.0242,  0.0829, -0.0083,  0.2522,  0.1779,  0.1928, -0.25
-69, -0.4040,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [ 0.1750, -0.2587,  0.0133, -0.2125,  0.1243,  0.0346, -0.27
+72,  0.2673,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.1149, -0.2028, -0.1752, -0.1942, -0.3036,  0.5337,  0.03
-88,  0.1312,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [ 0.1240,  0.0122,  0.1321, -0.1090, -0.0051, -0.0048, -0.08
+00,  0.0623,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.4245,  0.3058, -0.2490,  0.0654,  0.1084, -0.0598,  0.34
-95,  0.0311,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [ 0.1334,  0.0728, -0.0356,  0.0396,  0.1656, -0.1858,  0.00
+08,  0.1235,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [-0.1928, -0.1891, -0.2955, -0.3391,  0.2615, -0.1450, -0.26
-82, -0.1339,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [-0.1629, -0.0923, -0.0512, -0.2433,  0.1016, -0.0403,  0.08
+88, -0.1327,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [ 0.2049, -0.0804, -0.1176, -0.0216, -0.0917, -0.0542,  0.18
-35,  0.0915,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [-0.2335, -0.1774, -0.0861, -0.1186, -0.1272, -0.0608, -0.05
+34, -0.0140,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [-0.0047,  0.1943, -0.1376, -0.2776,  0.0288,  0.1535,  0.09
-38, -0.0937,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [-0.0292, -0.0647,  0.1377,  0.2108, -0.0375,  0.0988,  0.07
+80,  0.1071,[] 
  []
 
 
-Overfull \hbox (237.74492pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 and variance of samples  W1 :  tensor([[0.3923, 0.4234, 0.49
-46, 0.2481, 0.4493, 0.2450, 0.2761, 0.3342, 0.3820,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [-0.3171,  0.0690,  0.0247, -0.2124, -0.0200,  0.0238,  0.13
+99, -0.0331,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.4420, 0.3859, 0.4415, 0.4125, 0.3175, 0.3814, 0.3217, 0.4
-444, 0.3659,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [-0.0929,  0.1975,  0.0876,  0.0975, -0.2569,  0.0861, -0.04
+92,  0.2758,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.3325, 0.4457, 0.4203, 0.6208, 0.4533, 0.2631, 0.4323, 0.5
-770, 0.3698,[] 
+Overfull \hbox (237.74492pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 and variance of samples  W1 :  tensor([[0.3592, 0.3715, 0.54
+87, 0.2535, 0.3442, 0.4236, 0.2998, 0.5729, 0.4033,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.3912, 0.3266, 0.3773, 0.3905, 0.5574, 0.6455, 0.5060, 0.3
-169, 0.4468,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.4458, 0.3312, 0.4317, 0.3211, 0.3217, 0.3912, 0.3933, 0.4
+606, 0.4516,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.4554, 0.6540, 0.2060, 0.3671, 0.4822, 0.3046, 0.2851, 0.4
-852, 0.4505,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.2782, 0.3205, 0.5102, 0.4104, 0.3093, 0.3729, 0.4369, 0.2
+085, 0.4021,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.5007, 0.4577, 0.4148, 0.3821, 0.4859, 0.3172, 0.4985, 0.4
-503, 0.2416,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.4582, 0.3734, 0.3329, 0.3571, 0.3348, 0.2480, 0.3009, 0.2
+123, 0.3273,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.4381, 0.5384, 0.4589, 0.3488, 0.5986, 0.4541, 0.4134, 0.3
-126, 0.2671,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.2321, 0.4526, 0.3034, 0.2971, 0.2951, 0.4715, 0.4704, 0.3
+166, 0.2394,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.5090, 0.4212, 0.4048, 0.5165, 0.2403, 0.1082, 0.6374, 0.3
-966, 0.2565,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.2294, 0.1911, 0.3265, 0.3510, 0.3685, 0.3401, 0.3739, 0.5
+084, 0.4844,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.3849, 0.4273, 0.3088, 0.5978, 0.3867, 0.5247, 0.4416, 0.3
-489, 0.5252,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.3258, 0.1964, 0.3032, 0.4131, 0.2503, 0.3646, 0.2690, 0.2
+913, 0.4242,[] 
  []
 
 
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 230--230
-[]\OT1/cmtt/m/n/10 [0.3821, 0.3247, 0.4055, 0.5226, 0.4852, 0.3786, 0.3103, 0.4
-447, 0.6368,[] 
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.2641, 0.4064, 0.3364, 0.4167, 0.3630, 0.3893, 0.3680, 0.4
+196, 0.2985,[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.4190, 0.3290, 0.2814, 0.4302, 0.3249, 0.2755, 0.5409, 0.2
+783, 0.2799,[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 232--232
+[]\OT1/cmtt/m/n/10 [0.2503, 0.4304, 0.2710, 0.3762, 0.4537, 0.3670, 0.4089, 0.3
+531, 0.5503,[] 
  []
 
 [10]
-<Figures/elbo_4Adam.png, id=248, 2678.3262pt x 1409.265pt>
-File: Figures/elbo_4Adam.png Graphic file (type png)
-<use Figures/elbo_4Adam.png>
-Package pdftex.def Info: Figures/elbo_4Adam.png  used on input line 232.
-(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
-<Figures/W0.png, id=249, 2678.3262pt x 1409.265pt>
+<Figures/elbo_Adam4.png, id=248, 408.52625pt x 279.0425pt>
+File: Figures/elbo_Adam4.png Graphic file (type png)
+<use Figures/elbo_Adam4.png>
+Package pdftex.def Info: Figures/elbo_Adam4.png  used on input line 234.
+(pdftex.def)             Requested size: 345.0pt x 235.66293pt.
+<Figures/W0.png, id=249, 359.3425pt x 264.99pt>
 File: Figures/W0.png Graphic file (type png)
 <use Figures/W0.png>
-Package pdftex.def Info: Figures/W0.png  used on input line 236.
-(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
-<Figures/b0.png, id=250, 2678.3262pt x 1409.265pt>
+Package pdftex.def Info: Figures/W0.png  used on input line 238.
+(pdftex.def)             Requested size: 345.0pt x 254.43198pt.
+ [11 <./Figures/elbo_Adam4.png>]
+<Figures/b0.png, id=257, 359.3425pt x 264.99pt>
 File: Figures/b0.png Graphic file (type png)
 <use Figures/b0.png>
-Package pdftex.def Info: Figures/b0.png  used on input line 240.
-(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
- [11 <./Figures/elbo_4Adam.png> <./Figures/W0.png>]
-<Figures/W1.png, id=261, 2678.3262pt x 1409.265pt>
+Package pdftex.def Info: Figures/b0.png  used on input line 242.
+(pdftex.def)             Requested size: 345.0pt x 254.43198pt.
+ [12 <./Figures/W0.png> <./Figures/b0.png>]
+<Figures/W1.png, id=266, 359.3425pt x 264.99pt>
 File: Figures/W1.png Graphic file (type png)
 <use Figures/W1.png>
-Package pdftex.def Info: Figures/W1.png  used on input line 244.
-(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
-<Figures/b1.png, id=262, 2678.3262pt x 1409.265pt>
+Package pdftex.def Info: Figures/W1.png  used on input line 246.
+(pdftex.def)             Requested size: 345.0pt x 254.43198pt.
+<Figures/b1.png, id=267, 365.365pt x 264.99pt>
 File: Figures/b1.png Graphic file (type png)
 <use Figures/b1.png>
-Package pdftex.def Info: Figures/b1.png  used on input line 248.
+Package pdftex.def Info: Figures/b1.png  used on input line 250.
+(pdftex.def)             Requested size: 345.0pt x 250.23087pt.
+[13 <./Figures/W1.png>]
+<Figures/tanhFuncs.png, id=276, 1326.8772pt x 722.7pt>
+File: Figures/tanhFuncs.png Graphic file (type png)
+<use Figures/tanhFuncs.png>
+Package pdftex.def Info: Figures/tanhFuncs.png  used on input line 267.
+(pdftex.def)             Requested size: 345.0pt x 187.90858pt.
+ [14 <./Figures/b1.png>]
+<Figures/uniformEst.png, id=287, 2678.3262pt x 1409.265pt>
+File: Figures/uniformEst.png Graphic file (type png)
+<use Figures/uniformEst.png>
+Package pdftex.def Info: Figures/uniformEst.png  used on input line 277.
 (pdftex.def)             Requested size: 345.0pt x 181.5121pt.
- [12 <./Figures/b0.png> <./Figures/W1.png>] [13 <./Figures/b1.png>]
-<Figures/elbo_5Adam.png, id=284, 2678.3262pt x 1409.265pt>
+ [15 <./Figures/tanhFuncs.png> <./Figures/uniformEst.png>] (./distributions.py)
+
+Overfull \hbox (342.744pt too wide) in paragraph at lines 288--288
+[]\OT1/cmtt/m/n/10 {'sample1': Normal(loc: 0.3225950300693512, scale: 6.5937132
+83538818), 'sample2': <distributions.Uniform object at 0x7f202702a3d0>}[] 
+ []
+
+<Figures/elbo_5Adam.png, id=298, 2678.3262pt x 1409.265pt>
 File: Figures/elbo_5Adam.png Graphic file (type png)
 <use Figures/elbo_5Adam.png>
-Package pdftex.def Info: Figures/elbo_5Adam.png  used on input line 284.
+Package pdftex.def Info: Figures/elbo_5Adam.png  used on input line 290.
 (pdftex.def)             Requested size: 345.0pt x 181.5121pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
- [14 <./Figures/elbo_5Adam.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
-
-(./hw4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
+[16]
+<Figures/pdfEstP5.png, id=328, 2678.3262pt x 1409.265pt>
+File: Figures/pdfEstP5.png Graphic file (type png)
+<use Figures/pdfEstP5.png>
+Package pdftex.def Info: Figures/pdfEstP5.png  used on input line 294.
+(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
+<Figures/estParamsP5.png, id=329, 2678.3262pt x 1409.265pt>
+File: Figures/estParamsP5.png Graphic file (type png)
+<use Figures/estParamsP5.png>
+Package pdftex.def Info: Figures/estParamsP5.png  used on input line 298.
+(pdftex.def)             Requested size: 345.0pt x 181.5121pt.
+ [17 <./Figures/elbo_5Adam.png> <./Figures/pdfEstP5.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+ [18 <./Figures/estParamsP5.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+ (./hw4.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `hw4.out' has not changed.
 (rerunfilecheck)             Checksum: 6A085832E2CE49EA3CB3865FEEC1BBA3;363.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 8597 strings out of 494847
- 121876 string characters out of 6179081
+ 8665 strings out of 494847
+ 122955 string characters out of 6179081
  449150 words of memory out of 5000000
- 11625 multiletter control sequences out of 15000+600000
+ 11654 multiletter control sequences out of 15000+600000
  11877 words of font info for 47 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 28i,8n,43p,719b,1754s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,8n,43p,747b,1754s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -613,10 +643,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on hw4.pdf (14 pages, 1794441 bytes).
+Output written on hw4.pdf (18 pages, 1612373 bytes).
 PDF statistics:
- 376 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 179 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 435 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 211 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
