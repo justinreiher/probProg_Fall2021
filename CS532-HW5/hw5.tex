@@ -53,7 +53,12 @@ The HOPPL is implemented following Peter Norvig's tutorial \url{https://norvig.c
 \lstinputlisting[language = Python, linerange ={26-40}]{evaluator.py}
 The evaluator itself likewise follows the format and style in the tutorial augmented with \texttt{sample} and \texttt{observe} where \texttt{observe} in this case does nothing interesting other than return the observed value:
 \lstinputlisting[language = Python, linerange ={44-81}]{evaluator.py}
-
+The primitives in the HOPPL are implemented with \texttt{lambda} expressions where possible (again following Peter Norvig's tutorial example). The environment primitive implemented are:
+\lstinputlisting[language = Python, linerange ={250-293}]{primitives.py}
+The lambda expressions all have as a first parameter the address which at this stage does nothing. Functions that required particular implementations are as shown:
+\lstinputlisting[language = Python, linerange ={168-248}]{primitives.py}
+Any changes to data structures are done on copies to not modify any original data. \texttt{Pyrsistent} provides that functional but is not extensively used here. The distribution objects that were provided in homework 4 are used and augmented with the address variable where implemented:
+\lstinputlisting[language = Python, linerange ={6-164}]{primitives.py}
 \section{Program 1: Deterministic and Probabilistic Tests}
 Output demonstrating all tests pass:
 \begin{verbatim}
